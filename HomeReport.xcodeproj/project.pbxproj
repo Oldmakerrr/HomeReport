@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		18042BBC289C2E8200147D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BBB289C2E8200147D22 /* AppDelegate.swift */; };
 		18042BBE289C2E8200147D22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BBD289C2E8200147D22 /* SceneDelegate.swift */; };
-		18042BC0289C2E8200147D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BBF289C2E8200147D22 /* ViewController.swift */; };
 		18042BC3289C2E8200147D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18042BC1289C2E8200147D22 /* Main.storyboard */; };
 		18042BC6289C2E8200147D22 /* HomeReport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18042BC4289C2E8200147D22 /* HomeReport.xcdatamodeld */; };
 		18042BC8289C2E8400147D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18042BC7289C2E8400147D22 /* Assets.xcassets */; };
 		18042BCB289C2E8400147D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18042BC9289C2E8400147D22 /* LaunchScreen.storyboard */; };
+		18042BD4289C30BB00147D22 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BD3289C30BB00147D22 /* SummaryTableViewController.swift */; };
+		18042BD6289C310600147D22 /* HomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BD5289C310500147D22 /* HomeListViewController.swift */; };
+		18042BD8289C314200147D22 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BD7289C314200147D22 /* FilterTableViewController.swift */; };
+		18042BDA289C318B00147D22 /* SaleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BD9289C318B00147D22 /* SaleHistoryViewController.swift */; };
+		18042BDD289C31EA00147D22 /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BDC289C31EA00147D22 /* HomeListTableViewCell.swift */; };
+		18042BE0289C426100147D22 /* homes.json in Resources */ = {isa = PBXBuildFile; fileRef = 18042BDF289C426100147D22 /* homes.json */; };
+		18042BE2289C466A00147D22 /* SaleHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE1289C466A00147D22 /* SaleHistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18042BB8289C2E8200147D22 /* HomeReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18042BBB289C2E8200147D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18042BBD289C2E8200147D22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18042BBF289C2E8200147D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18042BC2289C2E8200147D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18042BC5289C2E8200147D22 /* HomeReport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeReport.xcdatamodel; sourceTree = "<group>"; };
 		18042BC7289C2E8400147D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18042BCA289C2E8400147D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18042BCC289C2E8400147D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18042BD3289C30BB00147D22 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		18042BD5289C310500147D22 /* HomeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListViewController.swift; sourceTree = "<group>"; };
+		18042BD7289C314200147D22 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		18042BD9289C318B00147D22 /* SaleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleHistoryViewController.swift; sourceTree = "<group>"; };
+		18042BDC289C31EA00147D22 /* HomeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListTableViewCell.swift; sourceTree = "<group>"; };
+		18042BDF289C426100147D22 /* homes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homes.json; sourceTree = "<group>"; };
+		18042BE1289C466A00147D22 /* SaleHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleHistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +72,9 @@
 			children = (
 				18042BBB289C2E8200147D22 /* AppDelegate.swift */,
 				18042BBD289C2E8200147D22 /* SceneDelegate.swift */,
-				18042BBF289C2E8200147D22 /* ViewController.swift */,
+				18042BDE289C425200147D22 /* Model */,
+				18042BDB289C31D300147D22 /* View */,
+				18042BD2289C30A000147D22 /* Controllers */,
 				18042BC1289C2E8200147D22 /* Main.storyboard */,
 				18042BC7289C2E8400147D22 /* Assets.xcassets */,
 				18042BC9289C2E8400147D22 /* LaunchScreen.storyboard */,
@@ -68,6 +82,34 @@
 				18042BC4289C2E8200147D22 /* HomeReport.xcdatamodeld */,
 			);
 			path = HomeReport;
+			sourceTree = "<group>";
+		};
+		18042BD2289C30A000147D22 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18042BD3289C30BB00147D22 /* SummaryTableViewController.swift */,
+				18042BD5289C310500147D22 /* HomeListViewController.swift */,
+				18042BD9289C318B00147D22 /* SaleHistoryViewController.swift */,
+				18042BD7289C314200147D22 /* FilterTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18042BDB289C31D300147D22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18042BDC289C31EA00147D22 /* HomeListTableViewCell.swift */,
+				18042BE1289C466A00147D22 /* SaleHistoryTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18042BDE289C425200147D22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18042BDF289C426100147D22 /* homes.json */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +172,7 @@
 			files = (
 				18042BCB289C2E8400147D22 /* LaunchScreen.storyboard in Resources */,
 				18042BC8289C2E8400147D22 /* Assets.xcassets in Resources */,
+				18042BE0289C426100147D22 /* homes.json in Resources */,
 				18042BC3289C2E8200147D22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18042BDA289C318B00147D22 /* SaleHistoryViewController.swift in Sources */,
+				18042BDD289C31EA00147D22 /* HomeListTableViewCell.swift in Sources */,
+				18042BD4289C30BB00147D22 /* SummaryTableViewController.swift in Sources */,
+				18042BD6289C310600147D22 /* HomeListViewController.swift in Sources */,
 				18042BC6289C2E8200147D22 /* HomeReport.xcdatamodeld in Sources */,
-				18042BC0289C2E8200147D22 /* ViewController.swift in Sources */,
+				18042BD8289C314200147D22 /* FilterTableViewController.swift in Sources */,
 				18042BBC289C2E8200147D22 /* AppDelegate.swift in Sources */,
 				18042BBE289C2E8200147D22 /* SceneDelegate.swift in Sources */,
+				18042BE2289C466A00147D22 /* SaleHistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
