@@ -28,6 +28,7 @@
 		18042BF1289CF8BD00147D22 /* Condo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE9289CF8BD00147D22 /* Condo+CoreDataProperties.swift */; };
 		18042BF2289CF8BD00147D22 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BEA289CF8BD00147D22 /* Home+CoreDataClass.swift */; };
 		18042BF3289CF8BD00147D22 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BEB289CF8BD00147D22 /* Home+CoreDataProperties.swift */; };
+		18042BF5289CFEB100147D22 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BF4289CFEB100147D22 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		18042BE9289CF8BD00147D22 /* Condo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Condo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		18042BEA289CF8BD00147D22 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataClass.swift"; sourceTree = "<group>"; };
 		18042BEB289CF8BD00147D22 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		18042BF4289CFEB100147D22 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				18042BDF289C426100147D22 /* homes.json */,
+				18042BF4289CFEB100147D22 /* CoreDataStack.swift */,
 				18042BC4289C2E8200147D22 /* HomeReport.xcdatamodeld */,
 			);
 			path = Model;
@@ -219,6 +222,7 @@
 				18042BF2289CF8BD00147D22 /* Home+CoreDataClass.swift in Sources */,
 				18042BED289CF8BD00147D22 /* SingleFamily+CoreDataProperties.swift in Sources */,
 				18042BEE289CF8BD00147D22 /* SaleHistory+CoreDataClass.swift in Sources */,
+				18042BF5289CFEB100147D22 /* CoreDataStack.swift in Sources */,
 				18042BDA289C318B00147D22 /* SaleHistoryViewController.swift in Sources */,
 				18042BDD289C31EA00147D22 /* HomeListTableViewCell.swift in Sources */,
 				18042BD4289C30BB00147D22 /* SummaryTableViewController.swift in Sources */,

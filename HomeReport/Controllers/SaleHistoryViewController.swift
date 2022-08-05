@@ -16,5 +16,4 @@ class SaleHistoryViewController: UIViewController {
         super.viewDidLoad()
     }
 
-
 }

@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coreData = CoreDataStack()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        checkDataStore()
+        guard let rootTabBarController = window?.rootViewController as? UITabBarController,
+              let homeListNavigationController = rootTabBarController.viewControllers?.first as? UINavigationController,
+              let summaryNavigationController = rootTabBarController.viewControllers?[1] as? UINavigationController,
+              let homeListViewController = homeListNavigationController.viewControllers.first as? HomeListViewController,
+              let summaryTableViewController = summaryNavigationController.viewControllers.first as? SummaryTableViewController  else { return }
+        let managedObjectContext = coreData.persistentContainer.viewContext
+        homeListViewController.managedObjectContext = managedObjectContext
+        summaryTableViewController.managedObjectContext = managedObjectContext
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,9 +57,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        coreData.saveContext()
     }
 
+    private func checkDataStore() {
+        let request: NSFetchRequest<Home> = Home.fetchRequest()
+        
+        let moc = coreData.persistentContainer.viewContext
+        
+        do {
+            let mocCount = try moc.count(for: request)
+            if mocCount == 0 {
+                uploadSampleData()
+            }
+        } catch {
+            fatalError("Error in counting home record")
+        }
+    }
+    
+    private func uploadSampleData() {
+        
+    }
 
 }
 

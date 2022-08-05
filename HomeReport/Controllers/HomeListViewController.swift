@@ -6,19 +6,23 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeListViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
+    var managedObjectContext: NSManagedObjectContext?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     
     }
     
 
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {
+        
     }
+    
 }
