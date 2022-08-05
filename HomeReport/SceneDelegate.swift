@@ -64,19 +64,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let request: NSFetchRequest<Home> = Home.fetchRequest()
         
         let moc = coreData.persistentContainer.viewContext
-        
+        let parseJSON = ParseJson(coreData: coreData)
         do {
             let mocCount = try moc.count(for: request)
             if mocCount == 0 {
-                uploadSampleData()
+                parseJSON.uploadSampleData()
             }
         } catch {
             fatalError("Error in counting home record")
         }
-    }
-    
-    private func uploadSampleData() {
-        
     }
 
 }
