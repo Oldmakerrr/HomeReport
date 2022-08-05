@@ -19,9 +19,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eOM-Ld-Kno">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="YVe-xr-aY8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="For Sale"/>
+                                        <segment title="Sold"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="segmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="PdQ-W6-Eex"/>
+                                    </connections>
+                                </segmentedControl>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeListCell" rowHeight="65" id="SmI-Db-Xzz" customClass="HomeListTableViewCell" customModule="HomeReport" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="65"/>
+                                        <rect key="frame" x="0.0" y="76.5" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SmI-Db-Xzz" id="9sg-wb-fG2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
@@ -181,6 +192,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="segmentedControl" destination="YVe-xr-aY8" id="4az-Kt-Fjq"/>
                         <outlet property="tableView" destination="eOM-Ld-Kno" id="dMV-oG-9wC"/>
                     </connections>
                 </viewController>
@@ -207,7 +219,7 @@
                                 <rect key="frame" x="50" y="410" width="315" height="403"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Csh-eW-EXb" detailTextLabel="gSu-Xk-uqO" style="IBUITableViewCellStyleValue1" id="gXg-Y6-LKw" customClass="SaleHistoryTableViewCell" customModule="HomeReport" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SaleHistoryCell" textLabel="Csh-eW-EXb" detailTextLabel="gSu-Xk-uqO" style="IBUITableViewCellStyleValue1" id="gXg-Y6-LKw" customClass="SaleHistoryTableViewCell" customModule="HomeReport" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="315" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXg-Y6-LKw" id="zTz-T3-Jmk">
@@ -250,6 +262,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JmN-le-w1p"/>
+                    <connections>
+                        <outlet property="imageView" destination="ROf-tx-Oqa" id="WxS-ng-AUK"/>
+                        <outlet property="tableView" destination="zPn-St-y64" id="3I6-mj-Hsh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSG-v4-txy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,11 +278,11 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jXa-J6-vP5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="ZZr-Go-Gly">
+                            <tableViewSection id="ZZr-Go-Gly">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="zVG-mq-9yn" style="IBUITableViewCellStyleDefault" id="GFX-Il-R5S">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" textLabel="zVG-mq-9yn" style="IBUITableViewCellStyleDefault" id="GFX-Il-R5S">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GFX-Il-R5S" id="mFa-ZA-A2W">
@@ -283,7 +299,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="yEs-kK-yd8" style="IBUITableViewCellStyleDefault" id="qMW-wK-PnV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" textLabel="yEs-kK-yd8" style="IBUITableViewCellStyleDefault" id="qMW-wK-PnV">
                                         <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qMW-wK-PnV" id="2Rv-vq-09b">
@@ -300,7 +316,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="rJQ-Hw-PfJ" style="IBUITableViewCellStyleDefault" id="6e6-4D-Ntz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" textLabel="rJQ-Hw-PfJ" style="IBUITableViewCellStyleDefault" id="6e6-4D-Ntz">
                                         <rect key="frame" x="0.0" y="131.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6e6-4D-Ntz" id="0iC-QQ-AmT">
@@ -319,9 +335,9 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-2" id="UhJ-go-Q05">
+                            <tableViewSection id="UhJ-go-Q05">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="obi-a9-ynE" style="IBUITableViewCellStyleDefault" id="UnQ-Go-JbD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" textLabel="obi-a9-ynE" style="IBUITableViewCellStyleDefault" id="UnQ-Go-JbD">
                                         <rect key="frame" x="0.0" y="242" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UnQ-Go-JbD" id="jmk-1T-8xO">
@@ -338,7 +354,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="B8n-O0-uNE" style="IBUITableViewCellStyleDefault" id="8BZ-dn-WGg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" textLabel="B8n-O0-uNE" style="IBUITableViewCellStyleDefault" id="8BZ-dn-WGg">
                                         <rect key="frame" x="0.0" y="285.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8BZ-dn-WGg" id="C2g-Gy-Wws">
@@ -364,6 +380,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="LEh-fV-bsA"/>
+                    <connections>
+                        <outlet property="filterByCondoCell" destination="UnQ-Go-JbD" id="mRb-xj-Yip"/>
+                        <outlet property="filterBySingleFamilyCell" destination="8BZ-dn-WGg" id="fsd-oR-Rht"/>
+                        <outlet property="sortByLocationCell" destination="GFX-Il-R5S" id="hDm-2Q-ask"/>
+                        <outlet property="sortByPriceHighLowCell" destination="6e6-4D-Ntz" id="8PJ-Hv-M13"/>
+                        <outlet property="sortByPriceLowHighCell" destination="qMW-wK-PnV" id="82k-JT-azv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Okp-xU-rP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -379,7 +402,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="scrollEdgeAppearance">
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <color key="backgroundColor" red="0.58039215686274503" green="0.066666666666666666" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -398,11 +421,11 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="krn-J6-qtu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <sections>
                             <tableViewSection id="nEI-Ar-hjJ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="K5B-Ja-XoH" detailTextLabel="Klz-cn-hXI" style="IBUITableViewCellStyleValue1" id="mI9-cz-Gh0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoldHomesCell" textLabel="K5B-Ja-XoH" detailTextLabel="Klz-cn-hXI" style="IBUITableViewCellStyleValue1" id="mI9-cz-Gh0">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mI9-cz-Gh0" id="TC2-2F-u7q">
@@ -426,7 +449,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Lva-KD-t2q" detailTextLabel="bkt-sJ-YVP" style="IBUITableViewCellStyleValue1" id="97U-EL-p6Y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoldHomesCell" textLabel="Lva-KD-t2q" detailTextLabel="bkt-sJ-YVP" style="IBUITableViewCellStyleValue1" id="97U-EL-p6Y">
                                         <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="97U-EL-p6Y" id="CJC-IZ-rT1">
@@ -450,7 +473,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="462-sd-yGQ" detailTextLabel="BE5-W9-vH2" style="IBUITableViewCellStyleValue1" id="qiM-KS-6i4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoldHomesCell" textLabel="462-sd-yGQ" detailTextLabel="BE5-W9-vH2" style="IBUITableViewCellStyleValue1" id="qiM-KS-6i4">
                                         <rect key="frame" x="0.0" y="131.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qiM-KS-6i4" id="thZ-m5-nSn">
@@ -478,7 +501,7 @@
                             </tableViewSection>
                             <tableViewSection id="hMH-Ve-jCD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="iJl-Fa-uhP" detailTextLabel="oTn-Jg-W78" style="IBUITableViewCellStyleValue1" id="sUE-Cg-KTg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoldHomesCell" textLabel="iJl-Fa-uhP" detailTextLabel="oTn-Jg-W78" style="IBUITableViewCellStyleValue1" id="sUE-Cg-KTg">
                                         <rect key="frame" x="0.0" y="242" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sUE-Cg-KTg" id="KwC-Ic-krM">
@@ -502,7 +525,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="QOO-Fw-fIJ" detailTextLabel="mUN-dK-xTi" style="IBUITableViewCellStyleValue1" id="8gu-FT-6LE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoldHomesCell" textLabel="QOO-Fw-fIJ" detailTextLabel="mUN-dK-xTi" style="IBUITableViewCellStyleValue1" id="8gu-FT-6LE">
                                         <rect key="frame" x="0.0" y="285.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8gu-FT-6LE" id="4nV-Gt-jfr">
@@ -530,7 +553,7 @@
                             </tableViewSection>
                             <tableViewSection id="rwQ-DL-PQx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Lfn-VQ-YCh" detailTextLabel="i4f-eu-KFb" style="IBUITableViewCellStyleValue1" id="7bk-YO-JO3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoldHomesCell" textLabel="Lfn-VQ-YCh" detailTextLabel="i4f-eu-KFb" style="IBUITableViewCellStyleValue1" id="7bk-YO-JO3">
                                         <rect key="frame" x="0.0" y="396" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7bk-YO-JO3" id="HOf-6h-jSH">
@@ -554,7 +577,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="486-OH-uXf" detailTextLabel="ivl-NG-Xzi" style="IBUITableViewCellStyleValue1" id="yKa-Xw-fiI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SoldHomesCell" textLabel="486-OH-uXf" detailTextLabel="ivl-NG-Xzi" style="IBUITableViewCellStyleValue1" id="yKa-Xw-fiI">
                                         <rect key="frame" x="0.0" y="439.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yKa-Xw-fiI" id="8Wd-CA-Kop">
@@ -587,6 +610,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sold Homes" id="vXN-8I-S9h"/>
+                    <connections>
+                        <outlet property="avgPriceCondoLabel" destination="i4f-eu-KFb" id="ncj-CS-3h6"/>
+                        <outlet property="avgPriceSFLabel" destination="vXN-8I-S9h" id="hKk-0E-OfS"/>
+                        <outlet property="maxPriceHomeLabel" destination="mUN-dK-xTi" id="OTb-Li-tak"/>
+                        <outlet property="minPriceHomeLabel" destination="oTn-Jg-W78" id="G5a-PP-uHy"/>
+                        <outlet property="numCondoSoldLabel" destination="bkt-sJ-YVP" id="gnT-gx-V3n"/>
+                        <outlet property="numSFSoldLabel" destination="BE5-W9-vH2" id="PXP-79-z8y"/>
+                        <outlet property="totalSalesDollarLabel" destination="Klz-cn-hXI" id="IHi-zL-05K"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJ0-cm-qqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -598,6 +630,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Sbe-un-DtA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p7q-lI-l83">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -620,7 +653,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="scrollEdgeAppearance">
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <color key="backgroundColor" red="0.58039215686274503" green="0.066666666666666666" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -639,8 +672,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

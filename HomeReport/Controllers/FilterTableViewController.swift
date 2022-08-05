@@ -8,7 +8,15 @@
 import UIKit
 
 class FilterTableViewController: UITableViewController {
-
+    
+    
+    @IBOutlet weak var sortByLocationCell: UITableViewCell!
+    @IBOutlet weak var sortByPriceLowHighCell: UITableViewCell!
+    @IBOutlet weak var sortByPriceHighLowCell: UITableViewCell!
+    
+    @IBOutlet weak var filterByCondoCell: UITableViewCell!
+    @IBOutlet weak var filterBySingleFamilyCell: UITableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

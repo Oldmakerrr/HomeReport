@@ -9,6 +9,7 @@ import UIKit
 
 class HomeListViewController: UIViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,4 +19,6 @@ class HomeListViewController: UIViewController {
     }
     
 
+    @IBAction func segmentedAction(_ sender: UISegmentedControl) {
+    }
 }

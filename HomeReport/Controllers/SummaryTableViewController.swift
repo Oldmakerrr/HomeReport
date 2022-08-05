@@ -8,7 +8,15 @@
 import UIKit
 
 class SummaryTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var totalSalesDollarLabel: UILabel!
+    @IBOutlet weak var numCondoSoldLabel: UILabel!
+    @IBOutlet weak var numSFSoldLabel: UILabel!
+    @IBOutlet weak var minPriceHomeLabel: UILabel!
+    @IBOutlet weak var maxPriceHomeLabel: UILabel!
+    @IBOutlet weak var avgPriceCondoLabel: UILabel!
+    @IBOutlet weak var avgPriceSFLabel: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
