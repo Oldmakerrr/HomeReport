@@ -52,9 +52,9 @@ class FilterTableViewController: UITableViewController {
         case sortByLocationCell:
             setSortDescriptor(sortBy: "city", isAscending: true)
         case sortByPriceHighLowCell:
-            setSortDescriptor(sortBy: "price", isAscending: true)
-        case sortByPriceLowHighCell:
             setSortDescriptor(sortBy: "price", isAscending: false)
+        case sortByPriceLowHighCell:
+            setSortDescriptor(sortBy: "price", isAscending: true)
         case filterByCondoCell, filterBySingleFamilyCell:
             guard let text = selectedCell.textLabel?.text else { return }
             setFilterSearchPredicate(filterBy: text)

@@ -29,10 +29,11 @@ class HomeListViewController: UIViewController {
     private var home: Home?
     
     private var isForSale = true {
-        didSet {
-            loadData()
-        }
+        didSet { loadData() }
     }
+    
+    private var sortDescriptors = [NSSortDescriptor]()
+    private var searchPredicate: NSPredicate?
     
     //MARK: - Lifecycle
     
@@ -65,6 +66,8 @@ class HomeListViewController: UIViewController {
             let selectedHome = homes[selectedIndexPath.row]
             destination?.prepareViewController(with: selectedHome, moc: moc)
         case "ToFilter":
+            sortDescriptors = []
+            searchPredicate = nil
             let destination = segue.destination as? FilterTableViewController
             destination?.delegate = self
         default:
@@ -76,7 +79,10 @@ class HomeListViewController: UIViewController {
     
     private func loadData() {
         guard let moc = managedObjectContext,
-              let homes = home?.getHomesByStatus(isForSale: isForSale, moc: moc) else { return }
+              let homes = home?.getHomesByStatus(isForSale: isForSale,
+                                                 filterBy: searchPredicate,
+                                                 sortBy: sortDescriptors,
+                                                 moc: moc) else { return }
         self.homes = homes
         tableView.reloadData()
     }
@@ -115,7 +121,12 @@ extension HomeListViewController: UITableViewDelegate {
 extension HomeListViewController: FilterTableViewControllerDelegate {
     
     func didUpdateHomeList(filterBy: NSPredicate?, sortedBy: NSSortDescriptor?) {
-        
+        if let filterBy = filterBy {
+            searchPredicate = filterBy
+        }
+        if let sortedBy = sortedBy {
+            sortDescriptors.append(sortedBy)
+        }
     }
     
 }
