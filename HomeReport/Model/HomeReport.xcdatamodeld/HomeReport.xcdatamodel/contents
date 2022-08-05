@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Condo" representedClassName="Condo" parentEntity="Home" syncable="YES">
+        <attribute name="unitsPerBuilding" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Home" representedClassName="Home" syncable="YES">
+        <attribute name="bath" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="homeType" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="isForSale" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sqft" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="saleHistory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SaleHistory" inverseName="home" inverseEntity="SaleHistory"/>
+    </entity>
+    <entity name="SaleHistory" representedClassName="SaleHistory" syncable="YES">
+        <attribute name="soldDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="soldPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="home" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Home" inverseName="saleHistory" inverseEntity="Home"/>
+    </entity>
+    <entity name="SingleFamily" representedClassName="SingleFamily" parentEntity="Home" syncable="YES">
+        <attribute name="lotSize" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Condo" positionX="63.0208740234375" positionY="249.5402374267578" width="128" height="58"/>
+        <element name="SingleFamily" positionX="-142.2055053710938" positionY="250.6482391357422" width="128" height="58"/>
+        <element name="Home" positionX="-36" positionY="18" width="128" height="164"/>
+        <element name="SaleHistory" positionX="143.4934692382812" positionY="18.25799560546875" width="128" height="74"/>
+    </elements>
+</model>

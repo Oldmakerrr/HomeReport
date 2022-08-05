@@ -20,6 +20,14 @@
 		18042BDD289C31EA00147D22 /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BDC289C31EA00147D22 /* HomeListTableViewCell.swift */; };
 		18042BE0289C426100147D22 /* homes.json in Resources */ = {isa = PBXBuildFile; fileRef = 18042BDF289C426100147D22 /* homes.json */; };
 		18042BE2289C466A00147D22 /* SaleHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE1289C466A00147D22 /* SaleHistoryTableViewCell.swift */; };
+		18042BEC289CF8BD00147D22 /* SingleFamily+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE4289CF8BD00147D22 /* SingleFamily+CoreDataClass.swift */; };
+		18042BED289CF8BD00147D22 /* SingleFamily+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE5289CF8BD00147D22 /* SingleFamily+CoreDataProperties.swift */; };
+		18042BEE289CF8BD00147D22 /* SaleHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE6289CF8BD00147D22 /* SaleHistory+CoreDataClass.swift */; };
+		18042BEF289CF8BD00147D22 /* SaleHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE7289CF8BD00147D22 /* SaleHistory+CoreDataProperties.swift */; };
+		18042BF0289CF8BD00147D22 /* Condo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE8289CF8BD00147D22 /* Condo+CoreDataClass.swift */; };
+		18042BF1289CF8BD00147D22 /* Condo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BE9289CF8BD00147D22 /* Condo+CoreDataProperties.swift */; };
+		18042BF2289CF8BD00147D22 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BEA289CF8BD00147D22 /* Home+CoreDataClass.swift */; };
+		18042BF3289CF8BD00147D22 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18042BEB289CF8BD00147D22 /* Home+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,14 @@
 		18042BDC289C31EA00147D22 /* HomeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListTableViewCell.swift; sourceTree = "<group>"; };
 		18042BDF289C426100147D22 /* homes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homes.json; sourceTree = "<group>"; };
 		18042BE1289C466A00147D22 /* SaleHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		18042BE4289CF8BD00147D22 /* SingleFamily+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleFamily+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18042BE5289CF8BD00147D22 /* SingleFamily+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleFamily+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		18042BE6289CF8BD00147D22 /* SaleHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaleHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18042BE7289CF8BD00147D22 /* SaleHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaleHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		18042BE8289CF8BD00147D22 /* Condo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Condo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18042BE9289CF8BD00147D22 /* Condo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Condo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		18042BEA289CF8BD00147D22 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18042BEB289CF8BD00147D22 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,13 +89,13 @@
 				18042BBB289C2E8200147D22 /* AppDelegate.swift */,
 				18042BBD289C2E8200147D22 /* SceneDelegate.swift */,
 				18042BDE289C425200147D22 /* Model */,
+				18042BE3289CF65100147D22 /* Entity */,
 				18042BDB289C31D300147D22 /* View */,
 				18042BD2289C30A000147D22 /* Controllers */,
 				18042BC1289C2E8200147D22 /* Main.storyboard */,
 				18042BC7289C2E8400147D22 /* Assets.xcassets */,
 				18042BC9289C2E8400147D22 /* LaunchScreen.storyboard */,
 				18042BCC289C2E8400147D22 /* Info.plist */,
-				18042BC4289C2E8200147D22 /* HomeReport.xcdatamodeld */,
 			);
 			path = HomeReport;
 			sourceTree = "<group>";
@@ -108,8 +124,24 @@
 			isa = PBXGroup;
 			children = (
 				18042BDF289C426100147D22 /* homes.json */,
+				18042BC4289C2E8200147D22 /* HomeReport.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		18042BE3289CF65100147D22 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				18042BE4289CF8BD00147D22 /* SingleFamily+CoreDataClass.swift */,
+				18042BE5289CF8BD00147D22 /* SingleFamily+CoreDataProperties.swift */,
+				18042BE6289CF8BD00147D22 /* SaleHistory+CoreDataClass.swift */,
+				18042BE7289CF8BD00147D22 /* SaleHistory+CoreDataProperties.swift */,
+				18042BE8289CF8BD00147D22 /* Condo+CoreDataClass.swift */,
+				18042BE9289CF8BD00147D22 /* Condo+CoreDataProperties.swift */,
+				18042BEA289CF8BD00147D22 /* Home+CoreDataClass.swift */,
+				18042BEB289CF8BD00147D22 /* Home+CoreDataProperties.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,12 +216,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18042BF2289CF8BD00147D22 /* Home+CoreDataClass.swift in Sources */,
+				18042BED289CF8BD00147D22 /* SingleFamily+CoreDataProperties.swift in Sources */,
+				18042BEE289CF8BD00147D22 /* SaleHistory+CoreDataClass.swift in Sources */,
 				18042BDA289C318B00147D22 /* SaleHistoryViewController.swift in Sources */,
 				18042BDD289C31EA00147D22 /* HomeListTableViewCell.swift in Sources */,
 				18042BD4289C30BB00147D22 /* SummaryTableViewController.swift in Sources */,
+				18042BF1289CF8BD00147D22 /* Condo+CoreDataProperties.swift in Sources */,
+				18042BF0289CF8BD00147D22 /* Condo+CoreDataClass.swift in Sources */,
 				18042BD6289C310600147D22 /* HomeListViewController.swift in Sources */,
 				18042BC6289C2E8200147D22 /* HomeReport.xcdatamodeld in Sources */,
 				18042BD8289C314200147D22 /* FilterTableViewController.swift in Sources */,
+				18042BF3289CF8BD00147D22 /* Home+CoreDataProperties.swift in Sources */,
+				18042BEC289CF8BD00147D22 /* SingleFamily+CoreDataClass.swift in Sources */,
+				18042BEF289CF8BD00147D22 /* SaleHistory+CoreDataProperties.swift in Sources */,
 				18042BBC289C2E8200147D22 /* AppDelegate.swift in Sources */,
 				18042BBE289C2E8200147D22 /* SceneDelegate.swift in Sources */,
 				18042BE2289C466A00147D22 /* SaleHistoryTableViewCell.swift in Sources */,
