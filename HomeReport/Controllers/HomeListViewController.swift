@@ -65,7 +65,8 @@ class HomeListViewController: UIViewController {
             let selectedHome = homes[selectedIndexPath.row]
             destination?.prepareViewController(with: selectedHome, moc: moc)
         case "ToFilter":
-            break
+            let destination = segue.destination as? FilterTableViewController
+            destination?.delegate = self
         default:
             break
         }
@@ -104,6 +105,16 @@ extension HomeListViewController: UITableViewDataSource {
 extension HomeListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+}
+
+//MARK: - FilterTableViewControllerDelegate
+
+extension HomeListViewController: FilterTableViewControllerDelegate {
+    
+    func didUpdateHomeList(filterBy: NSPredicate?, sortedBy: NSSortDescriptor?) {
         
     }
     
