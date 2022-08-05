@@ -59,6 +59,7 @@ class ParseJson {
         ? Condo(context: moc)
         : SingleFamily(context: moc)
         
+        home.homeType = homeType
         home.bath = bath.int16Value
         home.bed = bed.int16Value
         home.price = price

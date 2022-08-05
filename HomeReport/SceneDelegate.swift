@@ -22,8 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let rootTabBarController = window?.rootViewController as? UITabBarController,
               let homeListNavigationController = rootTabBarController.viewControllers?.first as? UINavigationController,
               let summaryNavigationController = rootTabBarController.viewControllers?[1] as? UINavigationController,
-              let homeListViewController = homeListNavigationController.viewControllers.first as? HomeListViewController,
-              let summaryTableViewController = summaryNavigationController.viewControllers.first as? SummaryTableViewController  else { return }
+              let homeListViewController = homeListNavigationController.topViewController as? HomeListViewController,
+              let summaryTableViewController = summaryNavigationController.topViewController as? SummaryTableViewController  else { return }
         let managedObjectContext = coreData.persistentContainer.viewContext
         homeListViewController.managedObjectContext = managedObjectContext
         summaryTableViewController.managedObjectContext = managedObjectContext
