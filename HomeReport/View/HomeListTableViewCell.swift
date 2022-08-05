@@ -9,6 +9,7 @@ import UIKit
 
 class HomeListTableViewCell: UITableViewCell {
     
+    //MARK: - Outlets
     @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -29,12 +30,12 @@ class HomeListTableViewCell: UITableViewCell {
     internal func configureCell(home: Home) {
         cityLabel.text = home.city
         categoryLabel.text = home.homeType
-        priceLabel.text = "\(home.price)"
+        priceLabel.text = home.price.currencyFormatter
         bedLabel.text = String(home.bed)
         bathLabel.text = String(home.bath)
         sqftLabel.text = String(home.sqft)
 
-        if let imageData = home.image as Data?, let image = UIImage(data: imageData) {
+        if let imageData = home.image, let image = UIImage(data: imageData) {
             homeImageView.image = image
             homeImageView.layer.borderWidth = 1
             homeImageView.layer.cornerRadius = 4

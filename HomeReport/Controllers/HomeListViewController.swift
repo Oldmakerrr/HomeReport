@@ -11,7 +11,8 @@ import CoreData
 class HomeListViewController: UIViewController {
     
     //MARK: - Properties
-
+    
+    //MARK: - Outlets
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
@@ -47,11 +48,27 @@ class HomeListViewController: UIViewController {
     }
     
     //MARK: - Methods
-    
 
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {
         let selectedValue = sender.titleForSegment(at: sender.selectedSegmentIndex)
         isForSale = selectedValue == "For Sale" ? true : false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "History":
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow,
+                  let moc = managedObjectContext else { return }
+            let destination = segue.destination as? SaleHistoryViewController
+            let selectedHome = homes[selectedIndexPath.row]
+            destination?.prepareViewController(with: selectedHome, moc: moc)
+        case "ToFilter":
+            break
+        default:
+            break
+        }
     }
     
     //MARK: - Private Methods

@@ -9,6 +9,7 @@ import UIKit
 
 class SaleHistoryTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
     @IBOutlet weak var soldDateLabel: UILabel!
     @IBOutlet weak var soldPriceLabel: UILabel!
     
@@ -22,9 +23,9 @@ class SaleHistoryTableViewCell: UITableViewCell {
 
     }
     
-//    func configureCell(saleHistory: SaleHistory) {
-//        soldDateLabel.text = (saleHistory.soldDate as Date?)?.toString
-//        soldPriceLabel.text = saleHistory.soldPrice.currencyFormatter
-//    }
+    func configureCell(saleHistory: SaleHistory) {
+        soldDateLabel.text = saleHistory.soldDate?.toString
+        soldPriceLabel.text = saleHistory.soldPrice.currencyFormatter
+    }
     
 }
