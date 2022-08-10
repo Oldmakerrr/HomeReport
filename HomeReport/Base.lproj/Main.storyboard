@@ -611,7 +611,7 @@
                     <navigationItem key="navigationItem" title="Sold Homes" id="vXN-8I-S9h"/>
                     <connections>
                         <outlet property="avgPriceCondoLabel" destination="i4f-eu-KFb" id="ncj-CS-3h6"/>
-                        <outlet property="avgPriceSFLabel" destination="vXN-8I-S9h" id="hKk-0E-OfS"/>
+                        <outlet property="avgPriceSFLabel" destination="ivl-NG-Xzi" id="rkF-kq-VLE"/>
                         <outlet property="maxPriceHomeLabel" destination="mUN-dK-xTi" id="OTb-Li-tak"/>
                         <outlet property="minPriceHomeLabel" destination="oTn-Jg-W78" id="G5a-PP-uHy"/>
                         <outlet property="numCondoSoldLabel" destination="bkt-sJ-YVP" id="gnT-gx-V3n"/>

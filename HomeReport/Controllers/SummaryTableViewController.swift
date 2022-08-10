@@ -17,7 +17,8 @@ class SummaryTableViewController: UITableViewController {
     @IBOutlet weak var minPriceHomeLabel: UILabel!
     @IBOutlet weak var maxPriceHomeLabel: UILabel!
     @IBOutlet weak var avgPriceCondoLabel: UILabel!
-    @IBOutlet weak var avgPriceSFLabel: UINavigationItem!
+    @IBOutlet weak var avgPriceSFLabel: UILabel!
+    
     
     //MARK: - properties
     
@@ -41,6 +42,10 @@ class SummaryTableViewController: UITableViewController {
         totalSalesDollarLabel.text = home.totalSoldHomesValue(moc: managedObjectContext).currencyFormatter
         numCondoSoldLabel.text = String(home.totalSoldCondo(moc: managedObjectContext))
         numSFSoldLabel.text = String(home.totalSoldSingleFamilyHome(moc: managedObjectContext))
+        minPriceHomeLabel.text = home.soldPrice(priceType: "min", moc: managedObjectContext).currencyFormatter
+        maxPriceHomeLabel.text = home.soldPrice(priceType: "max", moc: managedObjectContext).currencyFormatter
+        avgPriceCondoLabel.text = home.averagePrice(for: .condo, moc: managedObjectContext).currencyFormatter
+        avgPriceSFLabel.text = home.averagePrice(for: .singleFamily, moc: managedObjectContext).currencyFormatter
     }
 
     // MARK: - Table view data source
