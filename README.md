@@ -11,7 +11,7 @@ In the application you can see the list of buying and selling houses. The data i
 <img src="(https://user-images.githubusercontent.com/92182846/205638260-bc94142f-453e-45d7-b556-292694f93e4b.png)" width=50% height=50%>
 
 
-<div style="width: 60%; height: 60%">
+<div style="width: 200; height: 200">
   
  ![Simulator Screen Shot - iPhone 14 Pro - 2022-12-05 at 14 41 30](https://user-images.githubusercontent.com/92182846/205638516-71df9e12-7d5f-47c1-bbe9-c4ef11817ba6.png)
   
